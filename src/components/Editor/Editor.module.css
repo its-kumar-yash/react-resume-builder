@@ -1,0 +1,42 @@
+.container {
+  min-width: 550px;
+  min-height: 450px;
+  max-width: 750px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  padding-top: 5px;
+  height: fit-content;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.header::-webkit-scrollbar {
+  height: 7px;
+}
+
+.header::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: #c7c7c7;
+}
+
+.header .section {
+  padding: 10px;
+  border-bottom: 2px solid transparent;
+  font-weight: 500;
+  font-size: 1rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.header .active {
+  border-bottom: 2px solid #239ce2;
+  color: #239ce2;
+}
