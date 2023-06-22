@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import styles from "./Editor.module.css";
+import InputControl from "../InputControl/InputControl";
 
 const Editor = (props) => {
   //store the sections props
@@ -25,6 +26,10 @@ const Editor = (props) => {
             {sections[key]}
           </div>
         ))}
+      </div>
+
+      <div className={styles.body}>
+        <InputControl label="Title" placeholder="Enter section title" />
       </div>
     </div>
   );

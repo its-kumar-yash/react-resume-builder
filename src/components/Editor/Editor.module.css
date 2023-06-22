@@ -40,3 +40,11 @@
   border-bottom: 2px solid #239ce2;
   color: #239ce2;
 }
+
+.body {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 0;
+}
