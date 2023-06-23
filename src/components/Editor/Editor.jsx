@@ -381,7 +381,7 @@ const Editor = (props) => {
   };
 
   //to submit data
-  //logic to set user input into resume object 
+  //logic to set user input into resume object
   const submitHandler = () => {
     // console.log(values);
     switch (sections[activeSectionKey]) {
@@ -511,6 +511,46 @@ const Editor = (props) => {
     }
   };
 
+  //logic to add more chips(projects/work/Experiencer)
+  const addNewHandler = () => {
+    const details = activeInformation?.details;
+    //when no details
+    if (!details) return;
+    //fetch last detail
+    const lastDetail = details.slice(-1)[0];
+    //last detail is empty no need to create
+    //new chip
+    if (!Object.keys(lastDetail).length) return;
+    details?.push({});
+
+    props.setInformation((prev) => ({
+      ...prev,
+      [sections[activeSectionKey]]: {
+        ...information[sections[activeSectionKey]],
+        details: details,
+      },
+    }));
+    setActiveDetailIndex(details?.length - 1);
+  };
+
+  //logic to delete current detail
+  const deleteDetailHandler = (index) => {
+    const details = activeInformation?.details
+      ? [...activeInformation?.details]
+      : "";
+    if (!details) return;
+    details.splice(index, 1);
+    props.setInformation((prev) => ({
+      ...prev,
+      [sections[activeSectionKey]]: {
+        ...information[sections[activeSectionKey]],
+        details: details,
+      },
+    }));
+
+    setActiveDetailIndex((prev) => (prev === index ? 0 : prev - 1));
+  };
+
   //update active section information, when we change section section key
   useEffect(() => {
     const activeInfo = information[sections[activeSectionKey]];
@@ -560,6 +600,34 @@ const Editor = (props) => {
     });
   }, [activeSectionKey]);
 
+  //to display chips when more work/experience is added
+  useEffect(() => {
+    setActiveInformation(information[sections[activeSectionKey]]);
+  }, [information]);
+
+  //To update active information in current chip section
+  useEffect(() => {
+    const details = activeInformation?.details;
+    if (!details) return;
+
+    const activeInfo = information[sections[activeSectionKey]];
+    setValues({
+      overview: activeInfo.details[activeDetailIndex]?.overview || "",
+      link: activeInfo.details[activeDetailIndex]?.link || "",
+      certificationLink:
+        activeInfo.details[activeDetailIndex]?.certificationLink || "",
+      companyName: activeInfo.details[activeDetailIndex]?.companyName || "",
+      location: activeInfo.details[activeDetailIndex]?.location || "",
+      startDate: activeInfo.details[activeDetailIndex]?.startDate || "",
+      endDate: activeInfo.details[activeDetailIndex]?.endDate || "",
+      points: activeInfo.details[activeDetailIndex]?.points || "",
+      title: activeInfo.details[activeDetailIndex]?.title || "",
+      linkedin: activeInfo.details[activeDetailIndex]?.linkedin || "",
+      github: activeInfo.details[activeDetailIndex]?.github || "",
+      college: activeInfo.details[activeDetailIndex]?.college || "",
+    });
+  }, [activeDetailIndex]);
+
   return (
     <div className={styles.container}>
       {/* to show the current active section */}
@@ -599,17 +667,19 @@ const Editor = (props) => {
                     {sections[activeSectionKey]} {index + 1}
                   </p>
                   <X
-                  // onClick={(event) => {
-                  //   event.stopPropagation();
-                  //   handleDeleteDetail(index);
-                  // }}
+                    onClick={(event) => {
+                      event.stopPropagation();
+                      deleteDetailHandler(index);
+                    }}
                   />
                 </div>
               ))
             : ""}
           {activeInformation?.details &&
           activeInformation?.details?.length > 0 ? (
-            <div className={styles.new}>+New</div>
+            <div className={styles.new} onClick={addNewHandler}>
+              +New
+            </div>
           ) : (
             ""
           )}
