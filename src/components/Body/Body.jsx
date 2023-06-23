@@ -53,7 +53,11 @@ const Body = () => {
         />
       </div>
       <div className={styles.main}>
-        <Editor sections={sections} />
+        <Editor
+          sections={sections}
+          // information={resumeInformation}
+          // setInformation={setResumeInformation}
+        />
       </div>
     </div>
   );
