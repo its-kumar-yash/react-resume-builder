@@ -69,3 +69,65 @@
 .detail .row > div {
   flex: 1;
 }
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.chips .new {
+  color: #239ce2;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.chip {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 4px 8px;
+  background-color: #808080;
+  border-radius: 20px;
+  cursor: default;
+}
+
+.chip p {
+  font-weight: 500;
+  line-height: 1.25rem;
+  color: #fff;
+}
+.chip svg {
+  color: #fff;
+  height: 18px;
+  width: 18px;
+  cursor: pointer;
+}
+
+.chips .active {
+  background-color: #239ce2;
+}
+
+.body button {
+  width: fit-content;
+  padding: 8px 16px;
+  border-radius: 5px;
+  background-color: #239ce2;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.body button:active {
+  transform: translateY(2px);
+}

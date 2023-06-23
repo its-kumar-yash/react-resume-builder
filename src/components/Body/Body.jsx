@@ -24,6 +24,45 @@ const Body = () => {
     other: "Other",
   };
 
+  //this state will store all the information of the resume
+  const [resumeInformation, setResumeInformation] = useState({
+    [sections.basicInfo]: {
+      id: sections.basicInfo, //section title is unique
+      sectionTitle: sections.basicInfo,
+      detail: {}, //detail is a object as we can have multiple user details e.g. phone no. address
+    },
+    [sections.workExp]: {
+      id: sections.workExp,
+      sectionTitle: sections.workExp,
+      details: [], // work experience can be more than 1, so used array to respresent that
+    },
+    [sections.project]: {
+      id: sections.project,
+      sectionTitle: sections.project,
+      details: [],
+    },
+    [sections.education]: {
+      id: sections.education,
+      sectionTitle: sections.education,
+      details: [],
+    },
+    [sections.achievement]: {
+      id: sections.achievement,
+      sectionTitle: sections.achievement,
+      points: [],
+    },
+    [sections.summary]: {
+      id: sections.summary,
+      sectionTitle: sections.summary,
+      detail: "",
+    },
+    [sections.other]: {
+      id: sections.other,
+      sectionTitle: sections.other,
+      detail: "",
+    },
+  });
+
   return (
     <div className={styles.container}>
       <p className={styles.heading}>Resume Builder</p>
@@ -55,7 +94,7 @@ const Body = () => {
       <div className={styles.main}>
         <Editor
           sections={sections}
-          // information={resumeInformation}
+          information={resumeInformation}
           // setInformation={setResumeInformation}
         />
       </div>
