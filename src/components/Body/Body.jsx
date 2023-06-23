@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ReactToPrint from "react-to-print"; // Print React components in the browser
 import { ArrowDown } from "react-feather"; //collection of simply beautiful open source icons
 import styles from "./Body.module.css";
@@ -25,6 +25,7 @@ const Body = () => {
   };
 
   //this state will store all the information of the resume
+  //to set user input to the resume object
   const [resumeInformation, setResumeInformation] = useState({
     [sections.basicInfo]: {
       id: sections.basicInfo, //section title is unique
@@ -63,6 +64,13 @@ const Body = () => {
     },
   });
 
+  //When resume information changes
+  //update the section information
+  useEffect(() => {
+    console.log(resumeInformation);
+  }, [resumeInformation])
+
+
   return (
     <div className={styles.container}>
       <p className={styles.heading}>Resume Builder</p>
@@ -95,7 +103,7 @@ const Body = () => {
         <Editor
           sections={sections}
           information={resumeInformation}
-          // setInformation={setResumeInformation}
+          setInformation={setResumeInformation}
         />
       </div>
     </div>

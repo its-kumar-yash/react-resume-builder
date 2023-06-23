@@ -19,6 +19,8 @@ const Editor = (props) => {
     information[sections[Object.keys(sections)[0]]]
   ); // default value is the info stored initially
 
+  //to store the index of active details section
+  //current chip index
   const [activeDetailIndex, setActiveDetailIndex] = useState(0);
 
   //store the currently selected section title
@@ -50,7 +52,7 @@ const Editor = (props) => {
         <InputControl
           label="Name"
           placeholder="Enter your full name eg. Aashu"
-          value={values.name}
+          value={values.name} // value is used instead of default value as it automatically clears out when state changes
           onChange={(event) =>
             setValues((prev) => ({ ...prev, name: event.target.value }))
           }
@@ -379,8 +381,134 @@ const Editor = (props) => {
   };
 
   //to submit data
+  //logic to set user input into resume object 
   const submitHandler = () => {
-    console.log(values);
+    // console.log(values);
+    switch (sections[activeSectionKey]) {
+      case sections.basicInfo: {
+        const tempDetail = {
+          name: values.name,
+          title: values.title,
+          linkedin: values.linkedin,
+          github: values.github,
+          email: values.email,
+          phone: values.phone,
+        };
+
+        props.setInformation((prev) => ({
+          ...prev,
+          [sections.basicInfo]: {
+            ...prev[sections.basicInfo],
+            detail: tempDetail,
+            sectionTitle,
+          },
+        }));
+        break;
+      }
+      case sections.workExp: {
+        const tempDetail = {
+          certificationLink: values.certificationLink,
+          title: values.title,
+          startDate: values.startDate,
+          endDate: values.endDate,
+          companyName: values.companyName,
+          location: values.location,
+          points: values.points,
+        };
+        const tempDetails = [...information[sections.workExp]?.details];
+        tempDetails[activeDetailIndex] = tempDetail;
+
+        props.setInformation((prev) => ({
+          ...prev,
+          [sections.workExp]: {
+            ...prev[sections.workExp],
+            details: tempDetails,
+            sectionTitle,
+          },
+        }));
+        break;
+      }
+      case sections.project: {
+        const tempDetail = {
+          link: values.link,
+          title: values.title,
+          overview: values.overview,
+          github: values.github,
+          points: values.points,
+        };
+        const tempDetails = [...information[sections.project]?.details];
+        tempDetails[activeDetailIndex] = tempDetail;
+
+        props.setInformation((prev) => ({
+          ...prev,
+          [sections.project]: {
+            ...prev[sections.project],
+            details: tempDetails,
+            sectionTitle,
+          },
+        }));
+        break;
+      }
+      case sections.education: {
+        const tempDetail = {
+          title: values.title,
+          college: values.college,
+          startDate: values.startDate,
+          endDate: values.endDate,
+        };
+        const tempDetails = [...information[sections.education]?.details];
+        tempDetails[activeDetailIndex] = tempDetail;
+
+        props.setInformation((prev) => ({
+          ...prev,
+          [sections.education]: {
+            ...prev[sections.education],
+            details: tempDetails,
+            sectionTitle,
+          },
+        }));
+        break;
+      }
+      case sections.achievement: {
+        const tempPoints = values.points;
+
+        props.setInformation((prev) => ({
+          ...prev,
+          [sections.achievement]: {
+            ...prev[sections.achievement],
+            points: tempPoints,
+            sectionTitle,
+          },
+        }));
+        break;
+      }
+      case sections.summary: {
+        const tempDetail = values.summary;
+
+        props.setInformation((prev) => ({
+          ...prev,
+          [sections.summary]: {
+            ...prev[sections.summary],
+            detail: tempDetail,
+            sectionTitle,
+          },
+        }));
+        break;
+      }
+      case sections.other: {
+        const tempDetail = values.other;
+
+        props.setInformation((prev) => ({
+          ...prev,
+          [sections.other]: {
+            ...prev[sections.other],
+            detail: tempDetail,
+            sectionTitle,
+          },
+        }));
+        break;
+      }
+    }
   };
 
   //update active section information, when we change section section key
@@ -388,6 +516,7 @@ const Editor = (props) => {
     const activeInfo = information[sections[activeSectionKey]];
     setActiveInformation(activeInfo);
     setSectionTitle(sections[activeSectionKey]);
+    setActiveDetailIndex(0);
 
     //Update values of user input while switching sections logic
     setValues({
