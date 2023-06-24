@@ -18,6 +18,11 @@ const Resume = (props) => {
   //to provide drag and drop support
   //there are two empty array, for two column in resume
   const [columns, setColumns] = useState([[], []]);
+  //State for drag and drop support
+  //represents the source section
+  const [source, setSource] = useState("");
+  //represents the destination section
+  const [target, setTarget] = useState("");
 
   //create all information as an object
   const info = {
@@ -45,6 +50,9 @@ const Resume = (props) => {
     [sections.workExp]: (
       <div
         key={"workExp"}
+        draggable
+        onDragOver={() => setTarget(info.workExp?.id)}
+        onDragEnd={() => setSource(info.workExp?.id)}
         className={`${styles.section} ${
           info.workExp?.sectionTitle ? "" : styles.hidden
         }`}
@@ -107,6 +115,9 @@ const Resume = (props) => {
     [sections.project]: (
       <div
         key={"project"}
+        draggable
+        onDragOver={() => setTarget(info.project?.id)}
+        onDragEnd={() => setSource(info.project?.id)}
         className={`${styles.section} ${
           info.project?.sectionTitle ? "" : styles.hidden
         }`}
@@ -162,6 +173,9 @@ const Resume = (props) => {
     [sections.education]: (
       <div
         key={"education"}
+        draggable
+        onDragOver={() => setTarget(info.education?.id)}
+        onDragEnd={() => setSource(info.education?.id)}
         className={`${styles.section} ${
           info.education?.sectionTitle ? "" : styles.hidden
         }`}
@@ -200,6 +214,9 @@ const Resume = (props) => {
     [sections.achievement]: (
       <div
         key={"achievement"}
+        draggable
+        onDragOver={() => setTarget(info.achievement?.id)}
+        onDragEnd={() => setSource(info.achievement?.id)}
         className={`${styles.section} ${
           info.achievement?.sectionTitle ? "" : styles.hidden
         }`}
@@ -227,6 +244,9 @@ const Resume = (props) => {
     [sections.summary]: (
       <div
         key={"summary"}
+        draggable
+        onDragOver={() => setTarget(info.summary?.id)}
+        onDragEnd={() => setSource(info.summary?.id)}
         className={`${styles.section} ${
           info.summary?.sectionTitle ? "" : styles.hidden
         }`}
@@ -242,6 +262,9 @@ const Resume = (props) => {
     [sections.other]: (
       <div
         key={"other"}
+        draggable
+        onDragOver={() => setTarget(info.other?.id)}
+        onDragEnd={() => setSource(info.other?.id)}
         className={`${styles.section} ${
           info.other?.sectionTitle ? "" : styles.hidden
         }`}
@@ -254,6 +277,39 @@ const Resume = (props) => {
     ),
   };
 
+  //function to swap source and target sections
+  const swapSourceTarget = (source, target) => {
+    if (!source || !target) return;
+    const tempColumns = [[...columns[0]], [...columns[1]]];
+
+    //searching source section coordinates
+    //find source row index
+    let sourceRowIdx = tempColumns[0].findIndex((item) => item === source);
+    //find source column index
+    let sourceColIdx = 0;
+    if (sourceRowIdx < 0) {
+      sourceColIdx = 1;
+      sourceRowIdx = tempColumns[1].findIndex((item) => item === source);
+    }
+
+    //doing same for target
+    let targetRowIdx = tempColumns[0].findIndex((item) => item === target);
+    let targetColIdx = 0;
+    if (targetRowIdx < 0) {
+      targetColIdx = 1;
+      targetRowIdx = tempColumns[1].findIndex((item) => item === target);
+    }
+
+    //swapping both
+    const tempSource = tempColumns[sourceColIdx][sourceRowIdx];
+    tempColumns[sourceColIdx][sourceRowIdx] =
+      tempColumns[targetColIdx][targetRowIdx];
+
+    tempColumns[targetColIdx][targetRowIdx] = tempSource;
+
+    setColumns(tempColumns);
+  };
+
   //filling column arrays while mounting
   //pass it by id
   useEffect(() => {
@@ -262,6 +318,13 @@ const Resume = (props) => {
       [sections.workExp, sections.achievement, sections.other],
     ]);
   }, []);
+
+  //swap source and target when source changes
+  useEffect(() => {
+    swapSourceTarget(source, target);
+  }, [source]);
+
+  //console.log(`source - ${source}, target - ${target}`);
 
   return (
     <div className={styles.container}>
