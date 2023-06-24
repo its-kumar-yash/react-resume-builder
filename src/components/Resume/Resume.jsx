@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import styles from "./Resume.module.css";
 import {
@@ -23,6 +23,8 @@ const Resume = (props) => {
   const [source, setSource] = useState("");
   //represents the destination section
   const [target, setTarget] = useState("");
+  //to select the css of container
+  const containerRef = useRef();
 
   //create all information as an object
   const info = {
@@ -326,8 +328,17 @@ const Resume = (props) => {
 
   //console.log(`source - ${source}, target - ${target}`);
 
+  //when active color of resume is changed
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!props.activeColor || !container) return;
+
+    //otherwise change the color property of container
+    container.style.setProperty("--color", props.activeColor);
+  }, [props.activeColor]);
+
   return (
-    <div className={styles.container}>
+    <div ref={containerRef} className={styles.container}>
       <div className={styles.header}>
         <p className={styles.heading}>{info.basicInfo?.detail?.name}</p>
         <p className={styles.subHeading}>{info.basicInfo?.detail?.title}</p>

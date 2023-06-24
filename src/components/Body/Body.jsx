@@ -110,6 +110,7 @@ const Body = () => {
         <Resume 
           sections={sections}
           information={resumeInformation}
+          activeColor={activeColor}
         />
       </div>
     </div>
