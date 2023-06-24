@@ -3,6 +3,7 @@ import ReactToPrint from "react-to-print"; // Print React components in the brow
 import { ArrowDown } from "react-feather"; //collection of simply beautiful open source icons
 import styles from "./Body.module.css";
 import Editor from "../Editor/Editor";
+import Resume from "../Resume/Resume";
 
 const Body = () => {
   //multiple color options
@@ -105,6 +106,8 @@ const Body = () => {
           information={resumeInformation}
           setInformation={setResumeInformation}
         />
+
+        <Resume />
       </div>
     </div>
   );

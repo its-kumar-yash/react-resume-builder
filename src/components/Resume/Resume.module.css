@@ -1,0 +1,53 @@
+.container {
+  --color: #239ce2;
+  min-width: 700px;
+  max-width: 850px;
+  margin: 0 auto;
+  flex: 1.2;
+  height: fit-content;
+  min-height: 900px;
+  box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.header .heading {
+  font-size: 2.7rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.header .subHeading {
+  color: var(--color);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.header .links {
+  margin-top: 15px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+
+.header .link {
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.header .link svg {
+  color: var(--color);
+  height: 16px;
+  width: 16px;
+}
