@@ -107,7 +107,10 @@ const Body = () => {
           setInformation={setResumeInformation}
         />
 
-        <Resume />
+        <Resume 
+          sections={sections}
+          information={resumeInformation}
+        />
       </div>
     </div>
   );
