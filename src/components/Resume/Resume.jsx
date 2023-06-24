@@ -266,22 +266,38 @@ const Resume = (props) => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <p className={styles.heading}>Name</p>
-        <p className={styles.subHeading}>Blockchain Developer</p>
+        <p className={styles.heading}>{info.basicInfo?.detail?.name}</p>
+        <p className={styles.subHeading}>{info.basicInfo?.detail?.title}</p>
 
         <div className={styles.links}>
-          <a className={styles.link}>
-            <AtSign /> Email@gmail.com
-          </a>
-          <a className={styles.link}>
-            <Phone /> 890678532
-          </a>
-          <a className={styles.link}>
-            <Linkedin /> www.linkedin.com
-          </a>
-          <a className={styles.link}>
-            <GitHub /> www.github.com
-          </a>
+          {info.basicInfo?.detail?.email ? (
+            <a className={styles.link} type="email">
+              <AtSign /> {info.basicInfo?.detail?.email}
+            </a>
+          ) : (
+            <span />
+          )}
+          {info.basicInfo?.detail?.phone ? (
+            <a className={styles.link}>
+              <Phone /> {info.basicInfo?.detail?.phone}
+            </a>
+          ) : (
+            <span />
+          )}
+          {info.basicInfo?.detail?.linkedin ? (
+            <a className={styles.link}>
+              <Linkedin /> {info.basicInfo?.detail?.linkedin}
+            </a>
+          ) : (
+            <span />
+          )}
+          {info.basicInfo?.detail?.github ? (
+            <a className={styles.link}>
+              <GitHub /> {info.basicInfo?.detail?.github}
+            </a>
+          ) : (
+            <span />
+          )}
         </div>
       </div>
       <div className={styles.main}>

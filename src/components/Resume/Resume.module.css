@@ -83,6 +83,7 @@
   gap: 10px;
   padding: 10px 0;
 }
+
 .section .content .item {
   border-bottom: 1px dotted lightgray;
   display: flex;
@@ -90,6 +91,62 @@
   gap: 4px;
   padding-bottom: 10px;
 }
+
 .section .content .item:last-child {
   border-bottom: none;
+}
+
+.content .title {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.3rem;
+}
+
+.content .subTitle {
+  font-weight: bold;
+  color: var(--color);
+  font-size: 1rem;
+}
+
+.content .overview {
+  font-size: 0.875rem;
+}
+
+.content .link {
+  display: flex;
+  gap: 5px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  color: var(--color);
+}
+.content .link svg {
+  height: 14px;
+  width: 14px;
+  color: var(--color);
+}
+
+.content .date {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.content .date svg {
+  height: 14px;
+  width: 14px;
+}
+
+.content .points,
+.numbered {
+  padding-left: 18px;
+  font-size: 0.875rem;
+}
+
+.numbered li {
+  list-style-type: decimal;
+}
+
+.hidden {
+  display: none;
 }
