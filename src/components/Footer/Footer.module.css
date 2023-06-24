@@ -1,0 +1,11 @@
+.container {
+  padding: 30px;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgb(238, 252, 255);
+}
+
+.container a {
+  text-decoration: none;
+  color: black;
+}
