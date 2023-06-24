@@ -69,8 +69,7 @@ const Body = () => {
   //update the section information
   useEffect(() => {
     console.log(resumeInformation);
-  }, [resumeInformation])
-
+  }, [resumeInformation]);
 
   return (
     <div className={styles.container}>
@@ -107,7 +106,8 @@ const Body = () => {
           setInformation={setResumeInformation}
         />
 
-        <Resume 
+        <Resume
+          ref={resumeRef}
           sections={sections}
           information={resumeInformation}
           activeColor={activeColor}
