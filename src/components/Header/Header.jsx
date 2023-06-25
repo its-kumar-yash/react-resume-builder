@@ -3,6 +3,10 @@ import styles from "./Header.module.css";
 import resumeBanner from "../../assets/resume1.svg";
 
 const Header = () => {
+  const scrollHandler = () => {
+    window.scroll({ top: 750, behavior: "smooth" });
+    // console.log("Clicked");
+  };
 
   return (
     <div className={styles.container}>
@@ -15,7 +19,9 @@ const Header = () => {
           which you follow a template and input your information. Ability to
           build, print, and download your resume for free in minutes.
         </p>
-        <button className={styles.btn}>Build Resume</button>
+        <button onClick={() => scrollHandler()} className={styles.btn}>
+          Build Resume
+        </button>
       </div>
       <div className={styles.right}>
         <img src={resumeBanner} alt="Resume" />

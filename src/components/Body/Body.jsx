@@ -72,48 +72,48 @@ const Body = () => {
   }, [resumeInformation]);
 
   return (
-    <div className={styles.container}>
-      <p className={styles.heading}>Resume Builder</p>
-      <div className={styles.toolbar}>
-        <div className={styles.colors}>
-          {colors.map((item) => (
-            <span
-              key={item}
-              style={{ backgroundColor: item }}
-              className={`${styles.color} ${
-                activeColor === item ? styles.active : ""
-              }`}
-              onClick={() => setActiveColor(item)}
-            />
-          ))}
+      <div className={styles.container}>
+        <p className={styles.heading}>Resume Builder</p>
+        <div className={styles.toolbar}>
+          <div className={styles.colors}>
+            {colors.map((item) => (
+              <span
+                key={item}
+                style={{ backgroundColor: item }}
+                className={`${styles.color} ${
+                  activeColor === item ? styles.active : ""
+                }`}
+                onClick={() => setActiveColor(item)}
+              />
+            ))}
+          </div>
+          <ReactToPrint
+            trigger={() => {
+              return (
+                <button>
+                  Download <ArrowDown />
+                </button>
+              );
+            }}
+            //store the change when button clicked
+            content={() => resumeRef.current}
+          />
         </div>
-        <ReactToPrint
-          trigger={() => {
-            return (
-              <button>
-                Download <ArrowDown />
-              </button>
-            );
-          }}
-          //store the change when button clicked
-          content={() => resumeRef.current}
-        />
-      </div>
-      <div className={styles.main}>
-        <Editor
-          sections={sections}
-          information={resumeInformation}
-          setInformation={setResumeInformation}
-        />
+        <div className={styles.main}>
+          <Editor
+            sections={sections}
+            information={resumeInformation}
+            setInformation={setResumeInformation}
+          />
 
-        <Resume
-          ref={resumeRef}
-          sections={sections}
-          information={resumeInformation}
-          activeColor={activeColor}
-        />
+          <Resume
+            ref={resumeRef}
+            sections={sections}
+            information={resumeInformation}
+            activeColor={activeColor}
+          />
+        </div>
       </div>
-    </div>
   );
 };
 
