@@ -7,7 +7,7 @@ import Resume from "../Resume/Resume";
 
 const Body = () => {
   //multiple color options
-  const colors = ["#239ce2", "#48bb78", "#0bc5ea", "#a0aec0", "#ed8936"];
+  const colors = ["#6b46c1", "#48bb78", "#0bc5ea", "#a0aec0", "#ed8936", "#239ce2"];
   //state denotes the current selected color for resume
   const [activeColor, setActiveColor] = useState(colors[0]);
   //to store the current reference of resume
@@ -73,7 +73,7 @@ const Body = () => {
 
   return (
       <div className={styles.container}>
-        <p className={styles.heading}>Resume Builder</p>
+        <p className={styles.heading}>Builder Dashboard</p>
         <div className={styles.toolbar}>
           <div className={styles.colors}>
             {colors.map((item) => (

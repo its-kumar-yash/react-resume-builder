@@ -1,5 +1,6 @@
 .container {
-  min-width: 550px;
+  /* min-width: 550px;  add while media queires*/
+  min-width: fit-content; 
   min-height: 450px;
   max-width: 750px;
   display: flex;
@@ -14,8 +15,10 @@
 .header {
   display: flex;
   gap: 10px;
+  padding: 0 10px;
   overflow-x: auto;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-family: "Archivo", sans-serif;
 }
 
 .header::-webkit-scrollbar {
@@ -24,7 +27,7 @@
 
 .header::-webkit-scrollbar-thumb {
   border-radius: 20px;
-  background-color: #c7c7c7;
+  background-color: #6b46c1;
 }
 
 .header .section {
@@ -34,11 +37,12 @@
   font-size: 1rem;
   white-space: nowrap;
   cursor: pointer;
+  font-family: "Archivo", sans-serif;
 }
 
 .header .active {
-  border-bottom: 2px solid #239ce2;
-  color: #239ce2;
+  border-bottom: 2px solid #6b46c1;
+  color: #6b46c1;
 }
 
 .body {
@@ -78,7 +82,7 @@
 }
 
 .chips .new {
-  color: #239ce2;
+  color: #6b46c1;
   font-weight: bold;
   letter-spacing: 1px;
   cursor: pointer;
@@ -107,14 +111,14 @@
 }
 
 .chips .active {
-  background-color: #239ce2;
+  background-color: #6b46c1;
 }
 
 .body button {
   width: fit-content;
   padding: 8px 16px;
   border-radius: 5px;
-  background-color: #239ce2;
+  background-color: #6b46c1;
   color: #fff;
   outline: none;
   border: none;

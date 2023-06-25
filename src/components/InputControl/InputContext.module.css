@@ -7,20 +7,31 @@
 label {
   font-weight: 500;
   font-size: 1rem;
+  font-family: "Archivo", sans-serif;
 }
 
 input {
-  border: 1px solid #cccccc;
+  font-family: "Archivo", sans-serif;
+  font-weight: 500;
+  border: none;
   outline: none;
   padding: 10px 12px;
   font-size: 1rem;
   border-radius: 5px;
+  background: #edf2f7;
 }
 
+::placeholder {
+  color: #a7abb7;
+}
+
+
 input:hover {
-  border: 1px solid #adadad;
+  border: none;
+  background: #d8e0e8;
 }
 
 input:focus {
-  border: 1px solid #239ce2;
+  background: #fff;
+  border: 2px solid #6b46c1;
 }

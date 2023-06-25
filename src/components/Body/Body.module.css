@@ -3,13 +3,14 @@
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  padding: 30px;
-  padding-top: 0;
+  /* padding: 4rem 6rem; Remove while Media Queries */
+  padding: 4rem 6rem;
 }
 
 .heading {
   font-weight: 500;
   font-size: 2.1rem;
+  font-family: "Archivo", sans-serif;
 }
 
 .toolbar {
@@ -22,7 +23,7 @@
 
 .colors {
   display: flex;
-  gap: 20px;
+  gap: 0.7rem;
   padding: 0 30px;
 }
 
@@ -30,7 +31,7 @@
   height: 36px;
   width: 36px;
   border-radius: 50%;
-  background-color: #239ce2;
+  background-color: #6b46c1;
 }
 .colors .active {
   border: 2px solid #000;
@@ -38,14 +39,15 @@
 
 .toolbar button {
   display: flex;
+  font-family: "Archivo", sans-serif;
   border-radius: 5px;
-  background-color: #239ce2;
+  background-color: #6b46c1;
   color: #ffffff;
-  padding: 8px 16px;
+  padding: 10px 20px;
   outline: none;
   border: none;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.1rem;
   letter-spacing: 1px;
   gap: 5px;
   align-items: center;
