@@ -113,10 +113,10 @@ const Editor = (props) => {
           label="Title"
           placeholder="Enter title eg. Frontend developer"
           value={values.title}
-          logic
-          to
-          update
-          values
+          // logic
+          // to
+          // update
+          // values
           onChange={(event) =>
             setValues((prev) => ({ ...prev, title: event.target.value }))
           }

@@ -68,7 +68,7 @@ const Body = () => {
   //When resume information changes
   //update the section information
   useEffect(() => {
-    console.log(resumeInformation);
+    // console.log(resumeInformation);
   }, [resumeInformation]);
 
   return (
