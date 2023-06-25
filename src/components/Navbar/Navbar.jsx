@@ -16,8 +16,8 @@ function Navbar() {
       <nav className="navbar" onClick={(e) => e.stopPropagation()}>
         <div className="nav-container">
           <a exact to="/" className="nav-logo">
-            CodeBucks
-            <FontAwesomeIcon icon={Icons.faCode} size="6px" />
+            ResumeXplorer
+            {/* <FontAwesomeIcon icon={Icons.fax} size="6px" /> */}
           </a>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
@@ -35,7 +35,7 @@ function Navbar() {
                 className="nav-links"
                 onClick={click ? handleClick : null}
               >
-                About
+                Templates
               </a>
             </li>
             <li className="nav-item">
@@ -44,7 +44,7 @@ function Navbar() {
                 className="nav-links"
                 onClick={click ? handleClick : null}
               >
-                Blog
+                About
               </a>
             </li>
             <li className="nav-item">
