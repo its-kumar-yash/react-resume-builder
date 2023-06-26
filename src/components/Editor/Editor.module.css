@@ -157,12 +157,6 @@
     height: fit-content;
     margin: 0 auto;
   }
-  .chips .new {
-    color: #6b46c1;
-    font-weight: bold;
-    letter-spacing: 1px;
-    cursor: pointer;
-  }
   .chip {
     padding: 4px 8px;
   }
@@ -177,11 +171,53 @@
     height: fit-content;
     margin: 0 auto;
   }
-  .chips .new {
-    color: #6b46c1;
-    font-weight: bold;
-    letter-spacing: 1px;
-    cursor: pointer;
+  .chip {
+    padding: 4px 8px;
+  }
+}
+
+@media only screen and (min-width: 550px) and (max-width: 599px) {
+  .container {
+    min-width: 500px;
+    min-height: 450px;
+    max-width: 750px;
+    padding-top: 5px;
+    height: fit-content;
+    margin: 0 auto;
+  }
+  .chip {
+    padding: 4px 8px;
+  }
+}
+
+@media only screen and (min-width: 550px) and (max-width: 599px) {
+  .container {
+    min-width: 550px;
+    min-height: 450px;
+    max-width: 750px;
+    padding-top: 5px;
+    height: fit-content;
+    margin: 0 auto;
+  }
+  .row{
+    flex-direction: column;
+  }
+  .chip {
+    padding: 4px 8px;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 549px) {
+  .container {
+    min-width: 450px;
+    min-height: 450px;
+    max-width: 750px;
+    padding-top: 5px;
+    height: fit-content;
+    margin: 0 auto;
+  }
+  .row{
+    flex-direction: column;
   }
   .chip {
     padding: 4px 8px;

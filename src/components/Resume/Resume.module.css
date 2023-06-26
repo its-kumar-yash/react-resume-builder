@@ -190,3 +190,23 @@
     max-width: 850px;
   }
 }
+
+@media only screen and (min-width: 550px) and (max-width: 599px) {
+  .container {
+    min-width: 500px;
+    max-width: 850px;
+  }
+  .main{
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 549px) {
+  .container {
+    min-width: 450px;
+    max-width: 850px;
+  }
+  .main{
+    flex-direction: column;
+  }
+}

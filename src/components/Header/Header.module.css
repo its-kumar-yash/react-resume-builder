@@ -23,7 +23,7 @@
   line-height: 4.1rem;
   font-weight: bold;
   letter-spacing: 1px;
-  font-family: 'Archivo', sans-serif;
+  font-family: "Archivo", sans-serif;
 }
 
 .heading {
@@ -48,7 +48,7 @@
   margin: 1rem 0;
   letter-spacing: 1px;
   line-height: 1.3rem;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 500;
 }
 
@@ -64,7 +64,7 @@
   outline: none;
   cursor: pointer;
   border-radius: 7px;
-  font-family: 'Archivo', sans-serif;
+  font-family: "Archivo", sans-serif;
 }
 
 .right img {
@@ -78,5 +78,25 @@
 
   .right img {
     width: 350px;
+  }
+}
+
+@media only screen and (min-width: 550px) and (max-width: 599px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .right img {
+    width: 350px;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 549px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .right img {
+    width: 300px;
   }
 }
