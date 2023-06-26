@@ -70,3 +70,13 @@
 .right img {
   width: 400px;
 }
+
+@media only screen and (min-width: 600px) and (max-width: 699px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .right img {
+    width: 350px;
+  }
+}

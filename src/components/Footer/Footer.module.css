@@ -9,7 +9,7 @@
 
 .header {
   font-size: 15px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .header a {
@@ -20,7 +20,6 @@
 .header a:hover {
   color: #2e1862;
 }
-
 
 .handles {
   display: flex;
@@ -39,4 +38,17 @@
 
 .handles svg {
   height: 30px;
+}
+
+@media only screen and (min-width: 700px) and (max-width: 750px) {
+  .container {
+    padding: 20px 2rem;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 699px) {
+  .container {
+    flex-direction: column;
+    gap: 4px;
+  }
 }

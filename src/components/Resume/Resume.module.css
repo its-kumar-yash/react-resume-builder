@@ -175,3 +175,18 @@
 .hidden {
   display: none;
 }
+
+
+@media only screen and (min-width: 700px) and (max-width: 750px) {
+  .container {
+    min-width: 500px;
+    max-width: 850px;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 699px) {
+  .container {
+    min-width: 500px;
+    max-width: 850px;
+  }
+}

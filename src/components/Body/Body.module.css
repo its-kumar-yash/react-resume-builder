@@ -69,3 +69,37 @@
   gap: 30px;
   width: 100%;
 }
+
+@media only screen and (max-width: 959px){
+  .container {
+    padding: 30px;
+  }
+
+  .toolbar button {
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+  
+}
+
+@media only screen and (min-width: 700px) and (max-width: 750px) {
+  .toolbar {
+    gap: 0px;
+  }
+  
+  .toolbar button {
+    padding: 8px 16px;
+    font-size: 1rem;
+  }  
+}
+
+@media only screen and (min-width: 600px) and (max-width: 699px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .toolbar button {
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+}
