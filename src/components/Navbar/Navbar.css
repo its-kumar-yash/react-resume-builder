@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
 .pages {
   color: #fff;
@@ -38,14 +38,14 @@
 }
 
 .nav-logo {
-  color: #805AD5;
+  color: #805ad5;
   align-items: center;
   margin-left: 20px;
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
   flex-grow: 1;
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
 }
 
 .nav-menu {
@@ -80,12 +80,12 @@
 
 .nav-item:hover:after {
   width: 100%;
-  background: #805AD5;
+  background: #805ad5;
 }
 
 .nav-item.active {
-  color: #805AD5;
-  border: 1px solid #805AD5;
+  color: #805ad5;
+  border: 1px solid #805ad5;
 }
 
 .nav-icon {
@@ -113,7 +113,7 @@
     z-index: 1;
   }
   .nav-item .active {
-    color: #805AD5;
+    color: #805ad5;
     border: none;
   }
   .nav-links {
@@ -130,6 +130,12 @@
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
-    color: #805AD5;
+    color: #805ad5;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 399px) {
+  .nav-logo {
+    font-size: 1.6rem;
   }
 }

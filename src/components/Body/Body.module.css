@@ -129,3 +129,37 @@
     font-size: 1rem;
   }
 }
+
+@media only screen and (min-width: 400px) and (max-width: 499px) {
+  .container {
+    flex-direction: column;
+  }
+  .toolbar {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .toolbar button {
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 399px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .toolbar {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .toolbar button {
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+}
+

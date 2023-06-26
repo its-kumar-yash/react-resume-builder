@@ -192,7 +192,7 @@
 
 @media only screen and (min-width: 550px) and (max-width: 599px) {
   .container {
-    min-width: 550px;
+    min-width: 500px;
     min-height: 450px;
     max-width: 750px;
     padding-top: 5px;
@@ -210,6 +210,40 @@
 @media only screen and (min-width: 500px) and (max-width: 549px) {
   .container {
     min-width: 450px;
+    min-height: 450px;
+    max-width: 750px;
+    padding-top: 5px;
+    height: fit-content;
+    margin: 0 auto;
+  }
+  .row{
+    flex-direction: column;
+  }
+  .chip {
+    padding: 4px 8px;
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 499px) {
+  .container {
+    min-width: 350px;
+    min-height: 450px;
+    max-width: 750px;
+    padding-top: 5px;
+    height: fit-content;
+    margin: 0 auto;
+  }
+  .row{
+    flex-direction: column;
+  }
+  .chip {
+    padding: 4px 8px;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 399px) {
+  .container {
+    min-width: 250px;
     min-height: 450px;
     max-width: 750px;
     padding-top: 5px;

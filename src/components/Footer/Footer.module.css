@@ -70,6 +70,7 @@
 
 @media only screen and (min-width: 500px) and (max-width: 549px) {
   .container {
+    padding: 20px 2rem;
     flex-direction: column;
     gap: 4px;
   }
@@ -80,5 +81,37 @@
 
   .handles svg {
     height: 20px;
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 499px) {
+  .container {
+    padding: 10px 2rem;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .header{
+    font-size: 12px;
+    gap: 2px;
+  }
+
+  .handles svg {
+    height: 16px;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 399px) {
+  .container {
+    padding: 10px 1rem;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .header{
+    font-size: 10px;
+    gap: 2px;
+  }
+
+  .handles svg {
+    height: 16px;
   }
 }

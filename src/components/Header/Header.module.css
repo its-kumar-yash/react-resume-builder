@@ -67,6 +67,10 @@
   font-family: "Archivo", sans-serif;
 }
 
+.btn:hover{
+  background: #550b97;
+}
+
 .right img {
   width: 400px;
 }
@@ -98,5 +102,32 @@
 
   .right img {
     width: 300px;
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 499px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .right img {
+    width: 300px;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 399px) {
+  .container {
+    flex-direction: column;
+  }
+  .heading {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  .btn{
+    font-size: large;
+    width: 9rem;
+  }
+  .right img {
+    width: 200px;
   }
 }

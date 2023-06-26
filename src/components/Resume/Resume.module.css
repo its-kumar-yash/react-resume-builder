@@ -176,7 +176,6 @@
   display: none;
 }
 
-
 @media only screen and (min-width: 700px) and (max-width: 750px) {
   .container {
     min-width: 500px;
@@ -196,7 +195,7 @@
     min-width: 500px;
     max-width: 850px;
   }
-  .main{
+  .main {
     flex-direction: column;
   }
 }
@@ -206,7 +205,33 @@
     min-width: 450px;
     max-width: 850px;
   }
-  .main{
+  .main {
     flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 499px) {
+  .container {
+    min-width: 350px;
+    max-width: 850px;
+  }
+  .main {
+    flex-direction: column;
+  }
+  .sectionTitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 399px) {
+  .container {
+    min-width: 250px;
+    max-width: 850px;
+  }
+  .main {
+    flex-direction: column;
+  }
+  .section .sectionTitle {
+    font-size: 1rem;
   }
 }
