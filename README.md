@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# 📄ResumeXpert
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The `ResumeXpert` is a web application that allows you to  generate customized Resume in few minutes on your requirements. It also has ability to build, print, and download your resume in minutes. It is built using the React JavaScript library and offers a range of features to customize and generate resumes efficiently.
 
-## Available Scripts
+## 📸Preview
+![ReactXpert-Preview-Image](./src/assets/preview1.jpeg)
 
-In the project directory, you can run:
+## ✨Features
 
-### `npm start`
+- `Live Resume Preview`:  A live preview feature enables users to see their resume changes in real-time as they make modifications.
+- `Drag-and-Drop Functionality`: The application supports a drag-and-drop functionality, allowing users to easily move and reorder sections within the resume.
+- `Support Download Functionality`: Once the resume is complete, users can export it as a PDF or download it as a file.
+- `Editable Sections`: Users can easily edit and rearrange different sections of their resume, such as personal information, education, work experience, projects, and more.
+- `Responsiveness`: The ResumeXpert is designed to be responsive and mobile-friendly.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🤖Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The ResumeXpert is built using the following technologies:
 
-### `npm test`
+- `React.js`: A JavaScript library for building user interfaces.
+  Used React features likes states, contexts etc.
+- `CSS Modules`: A CSS styling approach that allows for modular and scoped styling in React components.
+- `React-To-Print`: Library for printing React components.
+- `Vercel`: Platform for deploying React applications.
+- `FontAwesome`: Icon library for adding icons to the user interface.
+- `React-Feather` - React Icon library for adding icons to the user interface.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ✨Usage
 
-### `npm run build`
+1. Create a New Resume: Click on the `Build Resume` or scroll down to `Builder Dashboard` to start building a new resume.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Edit Resume Sections: Click on each section form to enter your details. Add or remove sections as needed.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Customize Section Content: Within each section, you can customize the content by adding relevant information.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Preview Your Resume: Use the live preview feature to see how your resume looks in real-time as you make changes.
 
-### `npm run eject`
+5. Save Your Resume: Once you are satisfied with your resume, click on the `Download` button, and you can save it to your local device for further use. Alternatively, you can print the resume directly from the downloaded file
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 💻Getting Started
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To run the ResumeXpert locally, follow these steps:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone the repository: `https://github.com/its-kumar-yash/react-resume-builder.git`
+2. Navigate to the project directory: `cd react-resume-builder`
+3. Install the dependencies: `npm install`
+4. Start the development server: `npm start`
+5. Open your web browser and visit `http://localhost:3000` to access the ResumeXpert.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## ✨Credits
+`ResumeXpert` is developed and maintained by `Yash`. Acknowledgements and credits to jigar-sable for design inspiration.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📧Contacts
+For any inquiries or feedback, please contact [Here](its.yash.kumar23@gmail.com).
