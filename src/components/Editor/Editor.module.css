@@ -78,7 +78,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
 }
 
 .chips .new {
@@ -86,13 +86,14 @@
   font-weight: bold;
   letter-spacing: 1px;
   cursor: pointer;
+  padding: 8px 10px;
 }
 
 .chip {
   display: flex;
   gap: 5px;
   align-items: center;
-  padding: 4px 8px;
+  padding: 8px 10px;
   background-color: #808080;
   border-radius: 20px;
   cursor: default;
@@ -101,6 +102,7 @@
 .chip p {
   font-weight: 500;
   line-height: 1.25rem;
+  font-family: "Archivo", sans-serif;
   color: #fff;
 }
 .chip svg {

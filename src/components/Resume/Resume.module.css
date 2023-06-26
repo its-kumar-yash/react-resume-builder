@@ -1,5 +1,5 @@
 .container {
-  --color: #239ce2;
+  --color: #6b46c1;
   min-width: 700px;
   max-width: 850px;
   margin: 0 auto;
@@ -22,6 +22,7 @@
   font-size: 2.7rem;
   font-weight: 500;
   text-transform: capitalize;
+  font-family: "Archivo", sans-serif;
 }
 
 .header .subHeading {
@@ -44,6 +45,9 @@
   align-items: center;
   gap: 5px;
   cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: inherit;
 }
 
 .header .link svg {
@@ -74,6 +78,8 @@
   font-size: 1.4rem;
   font-weight: bold;
   width: 100%;
+  text-transform: uppercase;
+  font-family: "Archivo", sans-serif;
   border-bottom: 2px solid #000;
 }
 
@@ -97,8 +103,10 @@
 }
 
 .content .title {
-  font-weight: 500;
+  text-transform: capitalize;
+  font-weight: 600;
   font-size: 1rem;
+  font-family: 'Raleway', sans-serif;
   line-height: 1.3rem;
 }
 
@@ -106,10 +114,14 @@
   font-weight: bold;
   color: var(--color);
   font-size: 1rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
 }
 
 .content .overview {
   font-size: 0.875rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
 }
 
 .content .link {
@@ -118,7 +130,11 @@
   font-size: 0.75rem;
   cursor: pointer;
   color: var(--color);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  text-decoration: none;
 }
+
 .content .link svg {
   height: 14px;
   width: 14px;
@@ -130,6 +146,9 @@
   gap: 5px;
   align-items: center;
   font-size: 0.875rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-style: italic;
 }
 
 .content .date svg {
@@ -141,10 +160,16 @@
 .numbered {
   padding-left: 18px;
   font-size: 0.875rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
 }
 
-.numbered li {
+.numbered .point {
   list-style-type: decimal;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 .hidden {
