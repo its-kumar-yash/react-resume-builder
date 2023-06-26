@@ -1,13 +1,31 @@
 import React from "react";
-
 import styles from "./Footer.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faGithub,
+  faInstagram,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
     <div className={styles.container}>
-      Copyright © 2022, All rights reserved <br />
-      Made with ♥ by{" "}
-      <a href="https://sagardng123.wixsite.com/sagardng">Yash Kumar</a>
+      <div className={styles.header}>
+        <p>
+          Copyright © 2023 ResumeXplorer. Designed By <a href="#">Yash Kumar</a>
+        </p>
+      </div>
+      <div className={styles.handles}>
+        <a href="#">
+          <FontAwesomeIcon icon={faInstagram} />
+        </a>
+        <a href="#">
+          <FontAwesomeIcon icon={faGithub} />
+        </a>
+        <a href="#">
+          <FontAwesomeIcon icon={faLinkedin} />
+        </a>
+      </div>
     </div>
   );
 };

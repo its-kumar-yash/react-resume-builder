@@ -1,11 +1,42 @@
 .container {
-  padding: 30px;
+  padding: 30px 6rem;
   text-align: center;
-  font-weight: bold;
-  background-color: rgb(238, 252, 255);
+  background-color: #edf2f7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.container a {
+.header {
+  font-size: 15px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.header a {
   text-decoration: none;
-  color: black;
+  color: #6b46c1;
+}
+
+.header a:hover {
+  color: #2e1862;
+}
+
+
+.handles {
+  display: flex;
+  gap: 15px;
+}
+
+.handles a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #6b46c1;
+}
+
+.handles a:hover {
+  color: #2e1862;
+}
+
+.handles svg {
+  height: 30px;
 }

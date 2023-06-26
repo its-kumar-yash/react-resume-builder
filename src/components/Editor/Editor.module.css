@@ -1,12 +1,13 @@
 .container {
   /* min-width: 550px;  add while media queires*/
-  min-width: fit-content; 
+  /* min-width: fit-content;  */
   min-height: 450px;
-  max-width: 750px;
+  /* max-width: 750px; */
   display: flex;
   flex-direction: column;
+  width: 55vw;
   gap: 30px;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding-top: 5px;
   height: fit-content;
   margin: 0 auto;

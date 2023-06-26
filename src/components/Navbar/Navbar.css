@@ -2,14 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 .pages {
-  color: #ffffff;
+  color: #fff;
   text-align: center;
   font-size: calc(1.5rem + 2vw);
   margin-top: 10%;
 }
 
 .navbar {
-  background-color: #ffffff;
+  background-color: #fff;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -106,7 +106,7 @@
   }
 
   .nav-menu.active {
-    background: #ffffff;
+    background: #fff;
     left: 0px;
     opacity: 1;
     transition: all 0.5s ease;
