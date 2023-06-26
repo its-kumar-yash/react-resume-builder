@@ -15,7 +15,7 @@ const Header = () => {
           If You Want To Get Gaining, Get A Resume
         </p>
         <p className={styles.subHeading}>
-          ResumeXplorer is a tool that often constitutes an automated process in
+          ResumeXpert is a tool that often constitutes an automated process in
           which you follow a template and input your information. Ability to
           build, print, and download your resume for free in minutes.
         </p>

@@ -12,17 +12,17 @@ const Footer = () => {
     <div className={styles.container}>
       <div className={styles.header}>
         <p>
-          Copyright © 2023 ResumeXplorer. Designed By <a href="#">Yash Kumar</a>
+          Copyright © 2023 ResumeXpert. Designed By <a href="https://www.linkedin.com/in/its-kumar-yash/">Yash Kumar</a>
         </p>
       </div>
       <div className={styles.handles}>
         <a href="#">
           <FontAwesomeIcon icon={faInstagram} />
         </a>
-        <a href="#">
+        <a href="https://github.com/its-kumar-yash">
           <FontAwesomeIcon icon={faGithub} />
         </a>
-        <a href="#">
+        <a href="https://www.linkedin.com/in/its-kumar-yash/">
           <FontAwesomeIcon icon={faLinkedin} />
         </a>
       </div>

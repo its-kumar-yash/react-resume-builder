@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
-import * as Icons from "@fortawesome/fontawesome-free-solid"
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import * as Icons from "@fortawesome/fontawesome-free-solid";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -15,13 +14,14 @@ function Navbar() {
       <div className={click ? "main-container" : ""} onClick={() => Close()} />
       <nav className="navbar" onClick={(e) => e.stopPropagation()}>
         <div className="nav-container">
-          <a exact to="/" className="nav-logo">
-            ResumeXplorer
+          <a href="#" className="nav-logo">
+            ResumeXpert
             {/* <FontAwesomeIcon icon={Icons.fax} size="6px" /> */}
           </a>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
               <a
+                href="#"
                 activeClassName="active"
                 className="nav-links"
                 onClick={click ? handleClick : null}
@@ -31,6 +31,7 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <a
+                href="#"
                 activeClassName="active"
                 className="nav-links"
                 onClick={click ? handleClick : null}
@@ -40,6 +41,7 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <a
+                href="#"
                 activeClassName="active"
                 className="nav-links"
                 onClick={click ? handleClick : null}
@@ -49,6 +51,7 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <a
+                href="#"
                 activeClassName="active"
                 className="nav-links"
                 onClick={click ? handleClick : null}
