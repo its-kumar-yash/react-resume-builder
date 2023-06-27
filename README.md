@@ -51,4 +51,4 @@ To run the ResumeXpert locally, follow these steps:
 `ResumeXpert` is developed and maintained by `Yash`. Acknowledgements and credits to jigar-sable for design inspiration.
 
 ## 📧Contacts
-For any inquiries or feedback, please contact [Here](its.yash.kumar23@gmail.com).
+For any inquiries or feedback, please contact [Here](mailto:its.yash.kumar23@gmail.com).
