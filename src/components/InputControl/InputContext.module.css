@@ -11,7 +11,7 @@ label {
 }
 
 input {
-  font-family: "Archivo", sans-serif;
+  font-family: "Raleway", sans-serif !important;
   font-weight: 500;
   border: none;
   outline: none;

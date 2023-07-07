@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as Icons from "@fortawesome/fontawesome-free-solid";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -14,24 +15,24 @@ function Navbar() {
       <div className={click ? "main-container" : ""} onClick={() => Close()} />
       <nav className="navbar" onClick={(e) => e.stopPropagation()}>
         <div className="nav-container">
-          <a href="#" className="nav-logo">
+          <Link to="/" className="nav-logo">
             ResumeXpert
             {/* <FontAwesomeIcon icon={Icons.fax} size="6px" /> */}
-          </a>
+          </Link>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
-              <a
-                href="#"
+              <Link
+                to="/"
                 activeClassName="active"
                 className="nav-links"
                 onClick={click ? handleClick : null}
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <a
-                href="#"
+                href="https://www.overleaf.com/latex/templates"
                 activeClassName="active"
                 className="nav-links"
                 onClick={click ? handleClick : null}
@@ -41,7 +42,7 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <a
-                href="#"
+                href="https://github.com/its-kumar-yash"
                 activeClassName="active"
                 className="nav-links"
                 onClick={click ? handleClick : null}
@@ -50,14 +51,14 @@ function Navbar() {
               </a>
             </li>
             <li className="nav-item">
-              <a
-                href="#"
+              <Link
+                to="/contactus"
                 activeClassName="active"
                 className="nav-links"
                 onClick={click ? handleClick : null}
               >
                 Contact Us
-              </a>
+              </Link>
             </li>
           </ul>
           <div className="nav-icon" onClick={handleClick}>
