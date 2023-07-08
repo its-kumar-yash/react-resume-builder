@@ -3,7 +3,7 @@
 The `ResumeXpert` is a web application that allows you to  generate customized Resume in few minutes on your requirements. It also has ability to build, print, and download your resume in minutes. It is built using the React JavaScript library and offers a range of features to customize and generate resumes efficiently.
 
 ## 📸Preview
-![ReactXpert-Preview-Image](src/assets/preview1.jpeg)
+<img src="src/assets/preview1.jpeg" alt="PreviewImage"></img>
 
 ## ✨Features
 
